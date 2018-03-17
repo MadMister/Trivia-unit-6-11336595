@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		F0048317205A862600D8F756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0048316205A862600D8F756 /* AppDelegate.swift */; };
-		F0048319205A862600D8F756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0048318205A862600D8F756 /* ViewController.swift */; };
 		F004831C205A862600D8F756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F004831A205A862600D8F756 /* Main.storyboard */; };
 		F004831E205A862600D8F756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F004831D205A862600D8F756 /* Assets.xcassets */; };
 		F0048321205A862600D8F756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F004831F205A862600D8F756 /* LaunchScreen.storyboard */; };
 		F004832C205A862600D8F756 /* TriviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004832B205A862600D8F756 /* TriviaTests.swift */; };
 		F0048337205A862600D8F756 /* TriviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0048336205A862600D8F756 /* TriviaUITests.swift */; };
+		F0048345205AF68300D8F756 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0048344205AF68300D8F756 /* MenuViewController.swift */; };
+		F004834A205AF78700D8F756 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0048349205AF78700D8F756 /* LeaderboardTableViewController.swift */; };
+		F004834C205AF8C200D8F756 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004834B205AF8C200D8F756 /* QuestionViewController.swift */; };
+		F023ADC8205D84F2004F9075 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F023ADC7205D84F2004F9075 /* GoogleService-Info.plist */; };
+		F023ADC9205D84F2004F9075 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F023ADC7205D84F2004F9075 /* GoogleService-Info.plist */; };
+		F023ADCA205D84F2004F9075 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F023ADC7205D84F2004F9075 /* GoogleService-Info.plist */; };
+		F0587C3F205BBA8D005BB842 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0587C3E205BBA8D005BB842 /* player.swift */; };
+		F0587C41205CA9B6005BB842 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0587C40205CA9B6005BB842 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,6 @@
 /* Begin PBXFileReference section */
 		F0048313205A862600D8F756 /* Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0048316205A862600D8F756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0048318205A862600D8F756 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F004831B205A862600D8F756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F004831D205A862600D8F756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0048320205A862600D8F756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		F0048332205A862600D8F756 /* TriviaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriviaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0048336205A862600D8F756 /* TriviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaUITests.swift; sourceTree = "<group>"; };
 		F0048338205A862600D8F756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0048344205AF68300D8F756 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F0048349205AF78700D8F756 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderboardTableViewController.swift; path = Trivia/LeaderboardTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		F004834B205AF8C200D8F756 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		F023ADC7205D84F2004F9075 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F0587C3E205BBA8D005BB842 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+		F0587C40205CA9B6005BB842 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,14 @@
 		F0048315205A862600D8F756 /* Trivia */ = {
 			isa = PBXGroup;
 			children = (
+				F0048346205AF69700D8F756 /* Controllers */,
 				F0048316205A862600D8F756 /* AppDelegate.swift */,
-				F0048318205A862600D8F756 /* ViewController.swift */,
 				F004831A205A862600D8F756 /* Main.storyboard */,
+				F0587C3E205BBA8D005BB842 /* player.swift */,
 				F004831D205A862600D8F756 /* Assets.xcassets */,
 				F004831F205A862600D8F756 /* LaunchScreen.storyboard */,
 				F0048322205A862600D8F756 /* Info.plist */,
+				F023ADC7205D84F2004F9075 /* GoogleService-Info.plist */,
 			);
 			path = Trivia;
 			sourceTree = "<group>";
@@ -123,6 +137,17 @@
 				F0048338205A862600D8F756 /* Info.plist */,
 			);
 			path = TriviaUITests;
+			sourceTree = "<group>";
+		};
+		F0048346205AF69700D8F756 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0587C40205CA9B6005BB842 /* ResultViewController.swift */,
+				F004834B205AF8C200D8F756 /* QuestionViewController.swift */,
+				F0048349205AF78700D8F756 /* LeaderboardTableViewController.swift */,
+				F0048344205AF68300D8F756 /* MenuViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0048321205A862600D8F756 /* LaunchScreen.storyboard in Resources */,
+				F023ADC8205D84F2004F9075 /* GoogleService-Info.plist in Resources */,
 				F004831E205A862600D8F756 /* Assets.xcassets in Resources */,
 				F004831C205A862600D8F756 /* Main.storyboard in Resources */,
 			);
@@ -242,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F023ADC9205D84F2004F9075 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F023ADCA205D84F2004F9075 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0048319205A862600D8F756 /* ViewController.swift in Sources */,
 				F0048317205A862600D8F756 /* AppDelegate.swift in Sources */,
+				F0587C41205CA9B6005BB842 /* ResultViewController.swift in Sources */,
+				F0587C3F205BBA8D005BB842 /* player.swift in Sources */,
+				F0048345205AF68300D8F756 /* MenuViewController.swift in Sources */,
+				F004834C205AF8C200D8F756 /* QuestionViewController.swift in Sources */,
+				F004834A205AF78700D8F756 /* LeaderboardTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
