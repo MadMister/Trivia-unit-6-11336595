@@ -14,11 +14,12 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var confirmButton: UIButton!
-    
+    // outlets
     
     @IBAction func nameFieldAltered(_ sender: UITextField) {
         updateConfirmButtonState()
     }
+    // IBActions
     
     var score: Int!
     
@@ -26,8 +27,8 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         scoreLabel.text = String(score)
         updateConfirmButtonState()
-        // Do any additional setup after loading the view.
     }
+    // fill in score and disable confirm button
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,11 +44,13 @@ class ResultViewController: UIViewController {
             leaderboardTableViewController.player = Player(name: nameField.text!, score: score)
         }
     }
+    // pass on player data to leaderboard
     
     func updateConfirmButtonState() {
         let text = nameField.text ?? ""
         confirmButton.isEnabled = !text.isEmpty
     }
+    // enable confirm button if name is entered
 
     /*
     // MARK: - Navigation

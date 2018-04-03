@@ -35,6 +35,7 @@ class LeaderboardTableViewController: UITableViewController {
                 }
             }
         }
+        // if a player submitted its score, add it to the leaderboard
         
         rootReference.getDocuments() { (snapshot, error) in
             if let error = error {
@@ -51,6 +52,7 @@ class LeaderboardTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        // read leaderboard data and reload the table with it
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -88,6 +90,7 @@ class LeaderboardTableViewController: UITableViewController {
         cell.textLabel?.text = currentPlayer.name
         cell.detailTextLabel?.text = String(currentPlayer.score)
     }
+    // fill in the labels of a cell
     
     /*
     func updateLeaderboard() {

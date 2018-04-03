@@ -18,7 +18,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answerField: UITextField!
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
-    
+    // outlets
     
     @IBAction func confirmButtonPressed() {
         next()
@@ -33,6 +33,7 @@ class QuestionViewController: UIViewController {
         }
         
     }
+    // IBActions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +42,8 @@ class QuestionViewController: UIViewController {
                 self.updateUI(with: answer, and: question)
             }
         }
-        
-
-        // Do any additional setup after loading the view.
     }
+    // start with a random question
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,6 +56,7 @@ class QuestionViewController: UIViewController {
             resultViewController.score = score
         }
     }
+    // pas on score to the result screen
     
     func fetchRandomQuestion(completion: @escaping (String?, String?) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -69,6 +69,7 @@ class QuestionViewController: UIViewController {
         }
         task.resume()
     }
+    // retrieve a question and the corresponding answer from the server
     
     func updateUI(with answer: String, and question: String) {
         DispatchQueue.main.async {
@@ -78,6 +79,7 @@ class QuestionViewController: UIViewController {
             self.scoreLabel.text = String(describing: self.score)
         }
     }
+    // update text in labels after question in retrieved
     
     func next() {
         if answerField.text == answerLabel.text {
@@ -87,6 +89,7 @@ class QuestionViewController: UIViewController {
         }
         count += 1
     }
+    // keep track of score and question number
 
     /*
     // MARK: - Navigation
