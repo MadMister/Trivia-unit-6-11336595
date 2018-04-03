@@ -89,9 +89,6 @@ class LeaderboardTableViewController: UITableViewController {
         cell.detailTextLabel?.text = String(currentPlayer.score)
     }
     
-    func addPlayer() {
-        
-    }
     /*
     func updateLeaderboard() {
         if let player = player {
