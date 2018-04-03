@@ -33,6 +33,20 @@ class QuestionViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func passButtonPressed(_ sender: UIButton) {
+        count = count + 1
+        if count < 5 {
+            fetchRandomQuestion { (answer, question) in
+                if let answer = answer, let question = question {
+                    self.updateUI(with: answer, and: question)
+                }
+            }
+        } else {
+            performSegue(withIdentifier: "ResultSegue", sender: nil)
+        }
+        
+    }
     // IBActions
     
     override func viewDidLoad() {
