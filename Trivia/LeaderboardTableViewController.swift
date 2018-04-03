@@ -7,17 +7,50 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class LeaderboardTableViewController: UITableViewController {
     
     
     
-    var player: Player!
+    var player: Player?
     var players = [Player]()
-
+    var sortedPlayers = [Player]()
+    var rootRef : DocumentReference!
+    
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        players.append(player!)
+        let rootReference = Firestore.firestore().collection("players")
+        
+        if let player = player {
+            let JSONplayer : [String : Any] = ["name" : player.name, "score" : player.score]
+            rootReference.addDocument(data: JSONplayer) { error in
+                if let error = error {
+                    print("mistakes were made in document \(error)")
+                } else {
+                    print("nice")
+                }
+            }
+        }
+        
+        rootReference.getDocuments() { (snapshot, error) in
+            if let error = error {
+                print("mistakes weren made loading data from document \(error)")
+            } else {
+                for document in snapshot!.documents {
+                    let name : String = document.data()["name"]! as! String
+                    let score : Int = document.data()["score"]! as! Int
+                    
+                    let retrievedPlayer = Player(name : name, score : score)
+                    self.players.append(retrievedPlayer)
+                }
+                self.sortedPlayers = self.players.sorted(by: {$0.score > $1.score})
+                self.tableView.reloadData()
+            }
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -51,11 +84,21 @@ class LeaderboardTableViewController: UITableViewController {
     }
     
     func configure(cell: UITableViewCell, forItemAt indexPath: IndexPath) {
-        let currentPlayer = players[indexPath.row]
+        let currentPlayer = sortedPlayers[indexPath.row]
         cell.textLabel?.text = currentPlayer.name
         cell.detailTextLabel?.text = String(currentPlayer.score)
     }
-
+    
+    func addPlayer() {
+        
+    }
+    /*
+    func updateLeaderboard() {
+        if let player = player {
+            rootReference.child("players").childByAutoId().setValue(player)
+        }
+    }
+    */
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

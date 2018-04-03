@@ -37,11 +37,10 @@ class ResultViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "leaderboardSegue" {
+        if segue.identifier == "LeaderboardSegueFromResults" {
             let navigationViewController = segue.destination as! UINavigationController
             let leaderboardTableViewController = navigationViewController.topViewController as! LeaderboardTableViewController
-            leaderboardTableViewController.player!.name = nameField.text!
-            leaderboardTableViewController.player!.score = score
+            leaderboardTableViewController.player = Player(name: nameField.text!, score: score)
         }
     }
     
